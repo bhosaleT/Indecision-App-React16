@@ -41,8 +41,8 @@ export default class IndecisionApp extends React.Component {
 
   //handleClosing the modal
   handleClosingModal = () => {
-    this.setState (() => {
-      return{
+    this.setState(() => {
+      return {
         selectedOption: undefined
       }
     })
@@ -91,17 +91,21 @@ export default class IndecisionApp extends React.Component {
 
   render() {
     const title = "Indecision App";
-    const subTitle = "put your life in the hands of react";
+    const subTitle = "Put your life in the hands of React"
 
 
     return (
       <div>
         <Header title={title} subtitle={subTitle} />
-        <Action hasOptions={this.state.options.length > 0} handlePick={this.handlePick} />
-        <Options options={this.state.options} handleDeleteOptions={this.handleDeleteOptions} handleDeleteOption={this.handleDeleteOption} />
-        <AddOption handleAddOption={this.handleAddOption} />
-        <OptionModal  selectedOption = {this.state.selectedOption}
-          handleClosingModal = {this.handleClosingModal}
+        <div className = "container">
+          <Action hasOptions={this.state.options.length > 0} handlePick={this.handlePick} />
+          <div className = "widget">
+          <Options options={this.state.options} handleDeleteOptions={this.handleDeleteOptions} handleDeleteOption={this.handleDeleteOption} />
+          <AddOption handleAddOption={this.handleAddOption} />
+          </div>
+        </div>
+        <OptionModal selectedOption={this.state.selectedOption}
+          handleClosingModal={this.handleClosingModal}
         />
       </div>
     )

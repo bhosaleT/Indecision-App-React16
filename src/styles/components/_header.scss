@@ -1,0 +1,25 @@
+.header{
+    background: $off-black;
+    color: whitesmoke;
+    margin-bottom: $m-size; //equivalent to 48 pixels.
+    padding: $m-size 0;
+}
+//block element modifier naming convention
+.header__title {
+
+    font-size: 3.2rem; //32px
+    margin: 0;
+}
+
+.header__subtitle {
+    color: $off-white;
+    font-size: $m-size;
+    font-weight: 500;
+    margin: 0.5rem 0 0 0;
+}
+
+@media(min-width: 45rem) {
+    .header{
+        margin-bottom: $xl-size;
+    }
+}

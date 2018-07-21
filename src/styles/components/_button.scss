@@ -1,0 +1,40 @@
+//big button
+.big-button {
+    background: $purple;
+    border: none;
+    border-bottom: .6rem solid darken($color: $purple, $amount: 10%);
+    color: white;
+    font-weight: bold;
+    font-size: $l-size;
+    margin-bottom: $m-size; // margin between button and the bottom.
+    padding: 2.4rem; //on either side of the text
+    width: 100%; //the button should use the maximum width provided.
+}
+
+.big-button:disabled {
+    opacity: 0.5;
+}
+
+//Button
+.button {
+    background: $purple;
+    border: none;
+    border-bottom: .3rem solid darken($purple, 10%);
+    color: white;
+    font-weight: 500;
+    padding: $s-size;
+}
+
+.button--link {
+    background: none;
+    border: none;
+    color: $off-white;
+    padding: 0;
+}
+
+//bem
+@media(min-width: 45rem) {
+    .big-button {
+        margin-bottom: $xl-size;
+    }
+}
